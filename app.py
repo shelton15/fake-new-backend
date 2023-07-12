@@ -5,6 +5,7 @@ from flask_mysqldb import MySQL
 import bcrypt
 from PIL import Image
 import numpy as np
+import joblib
 import tensorflow as tf
 from keras.models import load_model
 # from model import preprocess_input
@@ -20,7 +21,7 @@ app.config['MYSQL_DB'] = 'your_database_name'
 mysql = MySQL(app)
 
 # ========================= loading my model ============================
-model = load_model('model (1).sav')
+model_txt = joblib.load('model_text.sav')
 
 # ======================== end model load ===============================
 
