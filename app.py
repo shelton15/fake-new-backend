@@ -20,7 +20,7 @@ app.config['MYSQL_DB'] = 'your_database_name'
 mysql = MySQL(app)
 
 # ========================= loading my model ============================
-model = load_model('model.h5')
+model = load_model('model(1).sav')
 
 # ======================== end model load ===============================
 
