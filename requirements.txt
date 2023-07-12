@@ -1,0 +1,9 @@
+Flask
+flask-cors
+flask-mysql
+bcrypt
+flask_mysqldb
+Pillow
+numpy
+keras
+tensorflow
