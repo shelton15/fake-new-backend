@@ -82,15 +82,15 @@ def login():
     
 
 # Define an endpoint for testing the model
-# @app.route('/predict', methods=['POST'])
-# def predict():
-#     image_file = request.files['image']
-#     image = Image.open(image_file)
-#     x = preprocess_image(image)
-#     predictions = model_txt.predict(x)
-#     if predictions[0] < 0.5:
-#         prediction_text = 'Real'
-#     else:
-#         prediction_text = 'Fake'
-#     return jsonify({'prediction': prediction_text})
+@app.route('/predict', methods=['POST'])
+def predict():
+    image_file = request.files['image']
+    image = Image.open(image_file)
+    x = preprocess_image(image)
+    predictions = model_txt.predict(x)
+    if predictions[0] < 0.5:
+        prediction_text = 'Real'
+    else:
+        prediction_text = 'Fake'
+    return jsonify({'prediction': prediction_text})
 
