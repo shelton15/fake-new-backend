@@ -7,3 +7,4 @@ Pillow
 numpy
 keras
 tensorflow
+gunicorn
